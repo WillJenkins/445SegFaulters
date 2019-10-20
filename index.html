@@ -3,11 +3,13 @@
 <head>
     <style>
         table, th, td {
-            border: 1px solid black;
+            border: 1px solid black; 
             border-collapse: collapse;
         }
-        td, th {
-            padding: 15px;
+        td, th {padding: 15px;}
+        h1 {
+            text-shadow: 1px 1px 10px grey;
+            font-family: "Verdana";
         }
     </style>
     
@@ -40,52 +42,110 @@
         <!--name, service, tryIt, desc, resource all get replaced by text-->
         <tr>
             <td>William Jenkins</td>
-            <td>Storage: <br> Inputs: file path<br> Outputs: URL to file</td>
-            <td>tryIt</td>
-            <td>Read a file from the file path and store it in the server. </td>
+            <td>Storage: <br> Inputs: byte[] fileData, string fileName<br> Outputs: URL to file</td>
+            <td>link</td>
+            <td>Read a file from the input byte array and store it in the server as fileName. </td>
             <td>Write my own code and use local component to implement the service</td>
         </tr>
         
         <tr>
             <td>William Jenkins</td>
-            <td>Weather Forecast:<br>Input: zip code<br>Output: 5 days weather forecast</td>
-            <td>tryIt</td>
-            <td>Output the 5 days weather forecast for the area in the given zip code</td>
-            <td>Retrieve latitude and longitude and weather information from:<br>graphical.weather.gov/xml</td>
+            <td>WordFilter<br>Input: string <br>Output: string</td>
+            <td>link</td>
+            <td>Read the input string of text and filter out all stop words</td>
+            <td>Write my own code and use local component to implement the service</td>
         </tr>
         
         <tr>
-            <td>name</td>
-            <td>service</td>
-            <td>tryIt</td>
-            <td>desc</td>
-            <td>resource</td>
+            <td>William Jenkins</td>
+            <td>CreateAccount<br>Input: string account name, string password<br>Output: boolean</td>
+            <td>link</td>
+            <td>Checks if account name already exists and calls password encryption, then stores account object in XML file</td>
+            <td>Write my own code and use local component to implement the service</td>
         </tr>
         
         <tr>
-            <td>name</td>
-            <td>service</td>
-            <td>tryIt</td>
-            <td>desc</td>
-            <td>resource</td>
+            <td>William Jenkins</td>
+            <td>Login<br>Input: string account, string password<br>Output: boolean</td>
+            <td>link</td>
+            <td>Validates the account name with password and returns true if valid</td>
+            <td>Write my own code and use local component to implement the service</td>
         </tr>
         
         <tr>
-            <td>name</td>
-            <td>service</td>
-            <td>tryIt</td>
-            <td>desc</td>
-            <td>resource</td>
+            <td>William Jenkins</td>
+            <td>ValidatePassword<br>Input: string password<br>Output: boolean</td>
+            <td>link</td>
+            <td>Reads the input string, calls encryption, and returns true if matched </td>
+            <td>Write my own code and use local component to implement the service</td>
         </tr>
         
         <tr>
-            <td>name</td>
-            <td>service</td>
-            <td>tryIt</td>
-            <td>desc</td>
-            <td>resource</td>
+            <td>Robert Oller</td>
+            <td>NewsFocus<br>Input: String[]<br>Output: String[]</td>
+            <td>http://localhost:55525/Service1.svc</td>
+            <td>Uses an API to return a list of URLs of recent, popular news articles of a given list of topics</td>
+            <td>Retrieves information from the api "NewsApi"<br>https://newsapi.org/</td>
         </tr>
-        <!--just add more rows as needed-->
+        
+        <tr>
+            <td>Robert Oller</td>
+            <td>Solar Energy Service<br>
+                Input: decimal, decimal<br>
+                Output: decimal
+            </td>
+            <td>http://localhost:55525/Service1.svc</td>
+            <td>Output Average Direct Normal Irradiance of a given set of coordinates (if location if indexed)</td>
+            <td>Retrieves information at <br>https://developer.nrel.gov/docs/solar/solar-resource-v1/</td>
+        </tr>
+        
+        <tr>
+            <td>Robert Oller</td>
+            <td>Encryption <br>Input: String, String <br>Output: String</td>
+            <td>link</td>
+            <td>Encrypts a string based on username and password data</td>
+            <td>Write my own code and use local component to implement the service</td>
+        </tr>
+        
+        <tr>
+            <td>Robert Oller</td>
+            <td>ChangePassword<br>Input: String, String<br>Output: bool</td>
+            <td>link</td>
+            <td>Changes the password of a user. Requires the user’s current password to do so</td>
+            <td>Write my own code and use local component to implement the service</td>
+        </tr>
+        
+        <tr>
+            <td>Paul Vohs</td>
+            <td>Top10Words<br>Input: String url<br>Output: String[]</td>
+            <td>link</td>
+            <td>Returns the top 10 most frequently used words at a particular url</td>
+            <td>Write my own code and use local component to implement the service</td>
+        </tr>
+        
+        <tr>
+            <td>Paul Vohs</td>
+            <td>Weather Service<br>Input: String zip code<br>Output: String[]</td>
+            <td>link</td>
+            <td>Returns a 5 day forecast for the input zip code</td>
+            <td>Retrieves information from <br>http://api.openweathermap.org</td>
+        </tr>
+        
+        <tr>
+            <td>Paul Vohs</td>
+            <td>Create Post<br>Input: String post content<br>Output: void</td>
+            <td>link</td>
+            <td>Creates a new post with the input string content, stores in the server’s XML posts file</td>
+            <td>Write my own code and use local component to implement the service</td>
+        </tr>
+        
+        <tr>
+            <td>Paul Vohs</td>
+            <td>Request Feed<br>Input: void<br>Output: String[]</td>
+            <td>link</td>
+            <td>Returns the 100 most recent posts from the server’s XML posts file</td>
+            <td>Write my own code and use local component to implement the service</td>
+        </tr>
     </table>
     
     </body>
